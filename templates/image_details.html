@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uploaded Image Color Palette</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<div class = "container text-center">
+  <h3>'Image successfully uploaded and displayed below'</h3>
+    <img src ='static/uploads/{{filename}}', width="800", height="500">
+
+    <div class = "table">
+    <table class = "color_table">
+        <thead>
+        <tr>
+            <th>Color</th>
+            <th>Color Code</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for color in color_palette %}
+            <tr>
+                <td style = "background-color:{{color}}"></td>
+                <td>{{color}}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+        </div>
+
+    <p><a href="{{url_for('home')}}">Return to home page</a></p>
+    </div>
+</body>
+</html>

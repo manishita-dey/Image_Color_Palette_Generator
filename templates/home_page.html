@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Palette</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body bgcolor="#fabab0">
+<div class = 'container text-center'>
+    <!--default html file upload button-->
+    <h1> Welcome To Color Palette Extractor </h1>
+<form class = "image_upload_form" action="{{url_for('upload_image')}}" method ='post' enctype="multipart/form-data">
+
+<!--our custom file upload button-->
+    <label> Select Image</label><br>
+    <input type = 'file' placeholder= 'filename' name="filename">
+    <input type = 'submit' value="Submit">
+</form>
+    </div>
+</body>
+</html>
